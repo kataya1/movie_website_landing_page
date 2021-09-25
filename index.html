@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- to do build next project responsivly -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navigation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav>
+        <div class="firsts movmenu">
+            <p>Movies</p>
+            <div class="seconds-wrapper">
+                <div class="seconds">
+                    <p>Movie Search</p>
+                </div>
+                <div class="seconds">
+                    <p>Top Rated movie</p>
+                </div>
+                <div class="seconds">
+                    <p>Most Popular</p>
+                </div>
+                <div class="seconds">
+                    <p>Release Calendar</p>
+                </div>
+                <div class="seconds">
+                    <p>Movie News</p>
+                </div>
+                <div class="seconds">
+                    <p>Oscars</p>
+                </div>
+            </div>
+        </div>
+        <div class="firsts movmenu">
+            <p>Tv seires</p>
+            <div class="seconds-wrapper">
+                <div class="seconds">
+                    <p>Tv Seires Search</p>
+                </div>
+                <div class="seconds">
+                    <p>Top Rated Shows</p>
+                </div>
+                <div class="seconds">
+                    <p>Most Popular Shows</p>
+                </div>
+                <div class="seconds">
+                    <p>Release Calendar</p>
+                </div>
+                <div class="seconds">
+                    <p>Tv News</p>
+                </div>
+                <div class="seconds">
+                    <p>Emmys</p>
+                </div>
+            </div>
+        </div>
+        <div class="firsts" id='log-in'>
+            <p>Log-In</p>
+            <div class="seconds-wrapper" id="logindropdown">
+
+                <form action="">
+                    <label for="username">Email</label>
+                    <input type="email" name="username" id="emailinput" placeholder="email">
+                    <label for="password">Passowrd</label>
+                    <input type="password" name="password" id="passwordinput" placeholder="password">
+                    <input type="submit" value="Log In" id="submitinput">
+                    <a class="smallfont" style="cursor: pointer;" onclick="alert(' ¯\\_(ツ)_/¯ make another account ')">forgot password?</a>
+                    <span class="smallfont">don't have an account? <a href="registeration.html">register</a></span>
+
+                </form>
+                <div id="frosty-form"></div>
+
+
+            </div>
+        </div>
+
+
+    </nav>
+    <div class="alwaysvisible">
+        <p><i class="fa fa-bars"></i></p>
+    </div>
+    <article >
+        <div id="watch-now-cont">
+            <section id="watch-now">
+                <h1 id="movie-title">Iron Man</h1>
+                <div id="movie-info"><span id="movie-genre">Action, Adventure</span> | <span
+                        id="release-date">2021</span>
+                </div>
+                <div id="big-button-cont">
+                    <div id="watch-now-button" class="big-movie-button">Watch Now</div>
+                    <div id="watch-trailer-button" class="big-movie-button" aria-checked="false"> Watch Trailer</div>
+                </div>
+            </section>
+            <section id="iframe-cont">
+                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/8YjFbMbfXaQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+            </section>
+        </div>
+        <div><p id="popular-p">Popular Right Now</p>
+        <section id="movie-slideshow">
+            
+            <!-- <img src="./assets/posters/batman.jpg" alt=""><img src="./assets/posters/blackwidow.jpg" alt=""><img
+                src="./assets/posters/changchi.webp" alt=""><img src="./assets/posters/dune.jpg" alt=""><img
+                src="./assets/posters/godzillavkong.jpg" alt=""><img src="./assets/posters/mortalkombat.jpg" alt=""><img
+                src="./assets/posters/raya.jpg" alt=""><img src="./assets/posters/redemptionday.jpg" alt=""><img
+                src="./assets/posters/ss.webp" alt=""><img src="./assets/posters/tomwars.jpg" alt=""><img
+                src="./assets/posters/venom.jpg" alt=""> -->
+        </section></div>
+    </article>
+    <div class="background-image" id="background-image-2"></div>
+    <div class="background-image" id="background-image-1"></div>
+    <div id="nonosmallscreen">
+        
+            <h1>Sorry for the inconvenience ಥ_ಥ</h1>
+            <p>this website doesn't work on this screen size 😅</p>
+            <p>try opening it from a bigger screen, or don't it's your choice</p>
+            <p>should have designed it responsivly. oh well ¯\_(ツ)_/¯</p>
+        
+    </div>
+    </body>
+<script src="script.js"></script>
+
+</html>

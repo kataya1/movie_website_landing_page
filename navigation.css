@@ -1,0 +1,137 @@
+* {
+    box-sizing: inherit;
+}
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+}
+nav{
+    display: flex;
+    /* padding: 10px; */
+    /* justify-content: center; */
+    background: transparent;
+    transition: opacity 0.3s;
+    opacity: 0;
+    /* gap: 1vw; */
+
+}
+nav:hover{
+    opacity: 1;
+}
+nav p{
+    cursor: pointer;
+    padding:10px 20px;
+    font-size: larger;
+    color: white;
+    text-shadow:
+    -1px -1px 5px #0006,
+    1px -1px 5px #0006,
+    -1px 1px 5px #0006,
+    1px 1px 5px #0006;
+}
+
+.seconds > p, .thirds > p{
+    font-size: smaller;
+    padding: 10px 30px 10px 10px;
+    /* word-wrap: unset; */
+}
+.firsts,.seconds{
+    position: relative;
+}
+
+.firsts > p:hover + .seconds-wrapper, .seconds-wrapper:hover{
+    
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    
+}
+
+.seconds-wrapper{
+    min-width: 200px;
+    background-color: #fff5;
+    /* backdrop-filter: blur(30px); */
+    /* -webkit-backdrop-filter: blur(30px); */
+    visibility: hidden;
+    opacity: 0;
+    position:absolute;
+    top:100%;
+    flex-direction: column; 
+    transition: 0.2s;
+    transform: translateY(10px);
+    z-index: 2;
+    box-shadow: 3px 3px 10px #0008;
+}
+/* .seconds-wrapper:before{
+    content: "";
+    position: absolute;
+    background: inherit;
+    top:0;
+    bottom:0;
+    left: 0;
+    right: 0;
+    box-shadow: inset 0 0 2000px #fff8;
+    filter: blur(30px);
+    margin: -20px;
+} */
+.seconds{
+    /* background-image: linear-gradient(#454545,#656565); */
+    border-bottom: 1px solid #0002;
+}
+
+nav:hover{
+    background-color: #fff3;
+    box-shadow: 2px 5px 5px #0003;
+
+}
+
+.firsts:hover,.seconds:hover{
+    background-color: white;
+    /* color: black; */
+    /* font-weight: 700; */
+    transition: background-color 0.3s;
+    
+}
+.firsts > p:hover, .seconds> p:hover{
+    color: black;
+    text-shadow: none;
+}
+
+
+#logindropdown{
+    padding: 10px;
+    display: grid;
+    right:0;
+    padding: 0;
+}
+
+.alwaysvisible{
+    /* opacity: 0; */
+    /* visibility: hidden; */
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 20px;
+    transition: 0.3s;
+    pointer-events: none;
+    z-index: 1;
+}
+body>nav:hover ~ .alwaysvisible{
+    opacity: 0;
+    visibility: hidden;
+}
+nav > div:first-child{
+    margin-left: 5vw;
+}
+#log-in{
+    padding-right:20px ;
+    padding-left: 20px;
+    margin-left: auto;
+}
