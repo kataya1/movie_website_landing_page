@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,8 +9,9 @@
     <link rel="stylesheet" href="registerationstyle.css">
     <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+
 </head>
+
 <body>
     <header>
         <!-- <img src="./ezgif.com-gif-maker(1).gif" alt=""> -->
@@ -29,8 +31,9 @@
                 <input type="password" name="password" id="passwordinput" placeholder="password">
                 <label for="confirmpassword">Confirm Passowrd</label>
                 <input type="password" name="confirmpassword" id="confirmpasswordinput" placeholder="password">
-                <input type="submit" value="Submit" id="submitinput"disabled>
-                <span><input type="checkbox" name="checkbox" id="checkboxinput"> By using our service you are accepting our <a href="">terms of use</a> </span>
+                <input type="submit" value="Submit" id="submitinput" disabled>
+                <span><input type="checkbox" name="checkbox" id="checkboxinput"> By using our service you are accepting
+                    our <a href="">terms of use</a> </span>
             </form>
         </section>
 
@@ -42,10 +45,13 @@
         <section id="links">
             <p>Sign up with one of your social accounts.</p>
             <div class="sl-cont">
-            <div class="social-links" id="Facebook"> <i class="fa fa-facebook"></i><span class="link-text">Register using Facebook</span> </div>
-            <div class="social-links" id="Twitter"><i class="fa fa-twitter"></i><span class="link-text">Register using Twitter</span> </div>
-            <div class="social-links" id="Google"> <i class="fa fa-google"></i><span class="link-text">Register using Google</span> </div>
-        </div>
+                <div class="social-links" id="Facebook"> <i class="fa fa-facebook"></i><span class="link-text">Register
+                        using Facebook</span> </div>
+                <div class="social-links" id="Twitter"><i class="fa fa-twitter"></i><span class="link-text">Register
+                        using Twitter</span> </div>
+                <div class="social-links" id="Google"> <i class="fa fa-google"></i><span class="link-text">Register
+                        using Google</span> </div>
+            </div>
         </section>
     </article>
     <footer>
@@ -64,23 +70,24 @@
         </div>
     </footer>
     <div class="background-image"></div>
-</body>
+</body >
 <script>
-   let cb = document.querySelector('#checkboxinput');
-   let s = document.querySelector('#submitinput')
-   let b = document.querySelector('.background-image')
-   cb.addEventListener('change', ()=>{
-       cansubmit(cb.checked)
+    let cb = document.querySelector('#checkboxinput');
+    let s = document.querySelector('#submitinput')
+    let b = document.querySelector('.background-image')
+    cb.addEventListener('change', () => {
+        cansubmit(cb.checked)
     })
-    
-    let cansubmit = (val) =>{
-        if(val)s.removeAttribute('disabled')
-       else s.setAttribute('disabled', "")
-    }
-    setTimeout(()=>{
 
-    })
-   b.style.backgroundImage = localStorage.getItem('bgi')
-   b.style.filter.blur = '15px';
+    let cansubmit = (val) => {
+        if (val) s.removeAttribute('disabled')
+        else s.setAttribute('disabled', "")
+    }
+    let setBg = ()=>{
+        b.style.backgroundImage = localStorage.getItem('bgi')
+        b.style.filter.blur = '15px';
+    }
+    setBg()
 </script>
+
 </html>

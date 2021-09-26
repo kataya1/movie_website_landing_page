@@ -276,3 +276,13 @@ footer img{
     text-align: center;
     color: gray;
 }
+
+@media only screen and (max-width: 600px) {
+    article{
+    grid-template-areas: "title title title" "form form form" "vline vline vline" 'link link link';
+
+    }
+    #vertical-line{
+        display: none;
+    }
+}
