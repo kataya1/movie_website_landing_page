@@ -87,11 +87,14 @@ let movieObj = {
 
 }
 
-// todo prelode movie image in backgroud-divs on hover
+
+// TODO 
+// create iframe only w when the watchtrailer is pressed so the background movie animation wouldn't be cluncky 
 // links :
 // https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fkataya1.github.io%2Fmovie_website_landing_page%2F  i got this from chrome developer tools
 // https://web.dev/preload-responsive-images/
 // https://web.dev/measure/
+
 
 
 ///
@@ -106,7 +109,7 @@ const loadImage = (url) => new Promise((resolve, reject) => {
 
 // for funcoolo
 const wt = document.querySelector('#watch-trailer-button')
-
+let wtCurrentMovie ;
 
 ////
 // create movie list into slideshow and add hover event listener to change background
@@ -124,6 +127,7 @@ let seedSlideshow = () => {
         loadImage(movieArr[i].poster)
             .then(img => {
                 img.addEventListener('mousedown', () => {
+                    wtCurrentMovie = i
                     changeDisplayedMovie(movieArr[i])
                 })
                 slshow.appendChild(img)
@@ -157,14 +161,14 @@ let changeDisplayedMovie = (imgobj) => {
         bgs[0].style.opacity = 1
         bgs[1].style.opacity = 0
     }
-    console.log('why is this not triggering')
+    // console.log('why is this not triggering')
     title.innerText = imgobj.name
     funcoolo(false)
     localStorage.setItem('bgi', `url(${imgobj.img})`)
-    ifr.setAttribute('src', `https://www.youtube.com/embed/${imgobj['trailer path']}`) //i think it's bettew than the other two methods for now
 }
 let setDefaultDisplayedMovie = (obj) => {
     changeDisplayedMovie(obj)
+    wtCurrentMovie = movieArr.indexOf(obj)
 }
 setDefaultDisplayedMovie(movieObj['Dune'])
 
@@ -213,13 +217,15 @@ function funcoolo(b = true) {
     // console.log(checked)
     // console.log('b is '+ b)
     if (checked == "false" && b) {
+        // ifr.setAttribute('src', `https://www.youtube.com/embed/${movieArr[wtCurrentMovie]['trailer path']}`)
+        iframeCont.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${movieArr[wtCurrentMovie]['trailer path']}" title="YouTube video player" frameborder="0" allow="gyroscope;" allowfullscreen></iframe>`
         wt.setAttribute('aria-checked', true)
         wt.textContent = 'Hide Trailer'
         iframeCont.classList.add('js-make-visible')
 
     } else {
    
-
+        iframeCont.innerHTML = ''
         wt.setAttribute('aria-checked', false)
         wt.textContent = 'Watch Trailer'
         iframeCont.classList.remove('js-make-visible')

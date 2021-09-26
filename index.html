@@ -2,7 +2,7 @@
 <html lang="en">
 
 <!-- to do build next project responsivly -->
-<!-- image preloading so use don't need to download image every time -->
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="navigation.css" async>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" defer>
-
+<!-- preloading images so it wouldn't load when you press the poster -->
     <link rel="preload" as="image" href="assets/movimages/blackwidow.jpeg" defer>
     <link rel="preload" as="image" href="assets/movimages/changchi.webp" defer>
     <link rel="preload" as="image" href="assets/movimages/godzillavkong.jpg" defer>
@@ -108,8 +108,8 @@
                     <div id="watch-trailer-button" class="big-movie-button" aria-checked="false"> Watch Trailer</div>
                 </div>
             </section>
-            <section id="iframe-cont">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/8YjFbMbfXaQ" title="YouTube video player" frameborder="0" allow="gyroscope;" allowfullscreen></iframe>
+            <section id="iframe-cont" width="560" height="315">
+                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/8YjFbMbfXaQ" title="YouTube video player" frameborder="0" allow="gyroscope;" allowfullscreen></iframe> -->
             </section>
         </div>
         <div><p id="popular-p">Popular Right Now</p>
