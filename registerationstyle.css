@@ -1,3 +1,6 @@
+:root{
+    font-size: 1px;
+}
 * {
     margin: 0;
     padding: 0;
@@ -13,9 +16,11 @@ html {
     box-sizing: inherit;
 }
 
+
 /* TODO  */
 /* add media queries to change grid layout */
 body{
+    font-size: 14rem ;
     height: 100%;
     display: grid;
     grid-template-areas: 'header' 
@@ -86,11 +91,14 @@ header img{
     
 }
 
-header a{
+header a {
     padding: 10px;
     text-decoration: none;
-    color: #3B7ECC;
-    text-shadow: 0 0 1px white;
+    color: white;
+    /* text-shadow: 0 0 1px #0003; */
+    font-weight:bolder ;
+    font-size: 17rem;
+    -webkit-text-stroke: 0.2rem #0004;
 }
 header a:first-child{
     margin-left: auto;
@@ -252,6 +260,8 @@ footer{
 footer ul{
     padding: 20px;
     display: flex;
+    flex-wrap: wrap;
+    row-gap: 5rem;
     list-style: none;
     justify-content: center;
     /* gap: 30px; */
@@ -278,6 +288,15 @@ footer img{
 }
 
 @media only screen and (max-width: 600px) {
+    :root{
+        font-size: 0.8px;
+    }
+    section#title h1{
+        font-size: 20rem;
+    }
+    #form{
+        padding: 0;
+    }
     article{
     grid-template-areas: "title title title" "form form form" "vline vline vline" 'link link link';
 

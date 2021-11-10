@@ -89,7 +89,7 @@ let movieObj = {
 
 
 // TODO 
-// create iframe only w when the watchtrailer is pressed so the background movie animation wouldn't be cluncky 
+// create iframe only w when the watchtrailer is pressed so the background movie animation wouldn't be cluncky  done
 // links :
 // https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fkataya1.github.io%2Fmovie_website_landing_page%2F  i got this from chrome developer tools
 // https://web.dev/preload-responsive-images/
@@ -208,7 +208,8 @@ lginbtn.addEventListener('mouseover', () => {
 // 
 // 
 // .js-make-visible
-wt.addEventListener('click', () => {
+wt.addEventListener('click', (e) => {
+    // e.target.style.width = "560px"
     funcoolo()
 })
 
@@ -218,7 +219,7 @@ function funcoolo(b = true) {
     // console.log('b is '+ b)
     if (checked == "false" && b) {
         // ifr.setAttribute('src', `https://www.youtube.com/embed/${movieArr[wtCurrentMovie]['trailer path']}`)
-        iframeCont.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${movieArr[wtCurrentMovie]['trailer path']}" title="YouTube video player" frameborder="0" allow="gyroscope;" allowfullscreen></iframe>`
+        iframeCont.innerHTML = `<iframe  src="https://www.youtube.com/embed/${movieArr[wtCurrentMovie]['trailer path']}" title="YouTube video player" frameborder="0" allow="gyroscope;" allowfullscreen></iframe>`
         wt.setAttribute('aria-checked', true)
         wt.textContent = 'Hide Trailer'
         iframeCont.classList.add('js-make-visible')
