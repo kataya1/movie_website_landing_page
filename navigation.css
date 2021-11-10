@@ -57,7 +57,8 @@ nav p{
 .seconds-wrapper{
     min-width: 200px;
     background-color: #fff5;
-    /* backdrop-filter: blur(30px); */
+    -moz-background-color: #fff9;
+    backdrop-filter: blur(15px);
     /* -webkit-backdrop-filter: blur(30px); */
     visibility: hidden;
     opacity: 0;
